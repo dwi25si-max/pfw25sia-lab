@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-class PekangganController extends Controller
+use App\Models\Pelanggan;
+class PelangganController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,7 +19,7 @@ class PekangganController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pelanggan.create');
     }
 
     /**
@@ -27,7 +27,19 @@ class PekangganController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       //dd($request->all())
+
+		$data['first_name'] = $request->first_name;
+		$data['last_name'] = $request->last_name;
+		$data['birthday'] = $request->birthday;
+		$data['gender'] = $request->gender;
+		$data['email'] = $request->email;
+		$data['phone'] = $request->phone;
+
+		Pelanggan::create($data);
+
+		return redirect()->route('pelanggan.index')
+        ->with('success','Penambahan Data Berhasil!');
     }
 
     /**
