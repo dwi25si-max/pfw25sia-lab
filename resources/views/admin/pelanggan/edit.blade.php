@@ -35,6 +35,7 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="theme-color" content="#ffffff">
 
+    
     <!-- Volt CSS -->
     <link type="text/css" href="{{asset('assets-admin/css/volt.css') }}" rel="stylesheet">
 
