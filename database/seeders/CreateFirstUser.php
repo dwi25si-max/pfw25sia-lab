@@ -20,7 +20,8 @@ class CreateFirstUser extends Seeder
                 'role' => 'admin',
                 'name' => 'Admin',
                 'password' => Hash::make('gatotkaca'),
-            ]
+
+                ]
         );
 
         User::updateOrCreate(

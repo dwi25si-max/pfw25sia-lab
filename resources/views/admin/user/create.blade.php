@@ -68,21 +68,6 @@
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
                                 </div>
-
-                                                             <!-- Role -->
-                                 <div class="mb-3">
-                                     <label for="role" class="form-label">Role</label>
-                                     <select id="role" name="role" class="form-select @error('role') is-invalid @enderror" required>
-                                         <option value="">-- Pilih Role --</option>
-                                         <option value="admin" {{ old('role') == 'admin' ? 'selected' : '' }}>Admin</option>
-                                         <option value="user" {{ old('role') == 'user' ? 'selected' : '' }}>User</option>
-                                         <option value="editor" {{ old('role') == 'editor' ? 'selected' : '' }}>Editor</option>
-                                     </select>
-                                     @error('role')
-                                         <div class="invalid-feedback">{{ $message }}</div>
-                                     @enderror
-                                 </div>
-
                                 <!-- Email -->
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Email</label>
@@ -108,19 +93,7 @@
                                  </div>
                             </div>
 
-                                                             <!-- Role -->
-                                 <div class="mb-3">
-                                     <label for="role" class="form-label">Role</label>
-                                     <select id="role" name="role" class="form-select @error('role') is-invalid @enderror" required>
-                                         <option value="">-- Pilih Role --</option>
-                                         <option value="admin" {{ old('role') == 'admin' ? 'selected' : '' }}>Admin</option>
-                                         <option value="user" {{ old('role') == 'user' ? 'selected' : '' }}>User</option>
-                                         <option value="editor" {{ old('role') == 'editor' ? 'selected' : '' }}>Editor</option>
-                                     </select>
-                                     @error('role')
-                                         <div class="invalid-feedback">{{ $message }}</div>
-                                     @enderror
-                                 </div>
+
 
                             <div class="col-lg-6 col-sm-12">
                                 <!-- Password -->
@@ -133,19 +106,7 @@
                                     @enderror
                                 </div>
 
-                                                             <!-- Role -->
-                                 <div class="mb-3">
-                                     <label for="role" class="form-label">Role</label>
-                                     <select id="role" name="role" class="form-select @error('role') is-invalid @enderror" required>
-                                         <option value="">-- Pilih Role --</option>
-                                         <option value="admin" {{ old('role') == 'admin' ? 'selected' : '' }}>Admin</option>
-                                         <option value="user" {{ old('role') == 'user' ? 'selected' : '' }}>User</option>
-                                         <option value="editor" {{ old('role') == 'editor' ? 'selected' : '' }}>Editor</option>
-                                     </select>
-                                     @error('role')
-                                         <div class="invalid-feedback">{{ $message }}</div>
-                                     @enderror
-                                 </div>
+
 
                                 <!-- Confirm Password -->
                                 <div class="mb-3">
@@ -157,53 +118,15 @@
                                     @enderror
                                 </div>
 
-                                                             <!-- Role -->
-                                 <div class="mb-3">
-                                     <label for="role" class="form-label">Role</label>
-                                     <select id="role" name="role" class="form-select @error('role') is-invalid @enderror" required>
-                                         <option value="">-- Pilih Role --</option>
-                                         <option value="admin" {{ old('role') == 'admin' ? 'selected' : '' }}>Admin</option>
-                                         <option value="user" {{ old('role') == 'user' ? 'selected' : '' }}>User</option>
-                                         <option value="editor" {{ old('role') == 'editor' ? 'selected' : '' }}>Editor</option>
-                                     </select>
-                                     @error('role')
-                                         <div class="invalid-feedback">{{ $message }}</div>
-                                     @enderror
-                                 </div>
-                            </div>
 
-                                                             <!-- Role -->
-                                 <div class="mb-3">
-                                     <label for="role" class="form-label">Role</label>
-                                     <select id="role" name="role" class="form-select @error('role') is-invalid @enderror" required>
-                                         <option value="">-- Pilih Role --</option>
-                                         <option value="admin" {{ old('role') == 'admin' ? 'selected' : '' }}>Admin</option>
-                                         <option value="user" {{ old('role') == 'user' ? 'selected' : '' }}>User</option>
-                                         <option value="editor" {{ old('role') == 'editor' ? 'selected' : '' }}>Editor</option>
-                                     </select>
-                                     @error('role')
-                                         <div class="invalid-feedback">{{ $message }}</div>
-                                     @enderror
-                                 </div>
+
 
                             <div class="col-12">
                                 <button type="submit" class="btn btn-primary">Simpan</button>
                                 <a href="{{ route('user.index') }}" class="btn btn-outline-secondary ms-2">Batal</a>
                             </div>
 
-                                                             <!-- Role -->
-                                 <div class="mb-3">
-                                     <label for="role" class="form-label">Role</label>
-                                     <select id="role" name="role" class="form-select @error('role') is-invalid @enderror" required>
-                                         <option value="">-- Pilih Role --</option>
-                                         <option value="admin" {{ old('role') == 'admin' ? 'selected' : '' }}>Admin</option>
-                                         <option value="user" {{ old('role') == 'user' ? 'selected' : '' }}>User</option>
-                                         <option value="editor" {{ old('role') == 'editor' ? 'selected' : '' }}>Editor</option>
-                                     </select>
-                                     @error('role')
-                                         <div class="invalid-feedback">{{ $message }}</div>
-                                     @enderror
-                                 </div>
+                            
                         </div>
                     </form>
                 </div>

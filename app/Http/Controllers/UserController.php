@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\User;
@@ -36,17 +35,15 @@ class UserController extends Controller
             'name'     => 'required|string|max:100',
             'email'    => 'required|email|unique:users,email',
             'password' => 'required|min:8|confirmed',
-            'role'     => 'required|string|in:admin,user,editor',
+            'role'     => 'required|in:Super Admin,Mitra,Pelanggan',
+
         ]);
 
-        $data['name'] = $request->name;
-        $data['email'] = $request->email;
+        $data['name']     = $request->name;
+        $data['email']    = $request->email;
         $data['password'] = Hash::make($request->password);
-        $data['role'] = $request->role;
+        $data['role']     = $request->role;
 
-        $data['name'] = $request->name;
-        $data['email'] = $request->email;
-        $data['password'] = Hash::make($request->password);
 
         User::create($data);
 
@@ -85,15 +82,13 @@ class UserController extends Controller
             'name'     => 'required|string|max:100',
             'email'    => ['required', 'email', Rule::unique('users', 'email')->ignore($user->id)],
             'password' => 'nullable|min:8|confirmed',
-            'role'     => 'required|string|in:admin,user,editor',
+            'role'     => 'required|in:Super Admin,Mitra,Pelanggan',
+
         ]);
 
-        $user->name = $request->name;
+        $user->name  = $request->name;
         $user->email = $request->email;
-        $user->role = $request->role;
-
-        $user->name = $request->name;
-        $user->email = $request->email;
+        $user->role  = $request->role;
 
         if ($request->filled('password')) {
             $user->password = Hash::make($request->password);
