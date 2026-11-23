@@ -5,7 +5,9 @@ use App\Http\Controllers\Homecontroller;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 Route::get('/home', function () {
     return view('home');
@@ -40,5 +42,13 @@ Route::get('/question', [QuestionController::class, 'index'])
 
 Route::get('/dashboard', [DashboardController::class, 'index'])
         ->name('dashboard.index');
+Route::redirect('/dashboard-alias', '/dashboard')->name('dashboard');
 
 Route::resource('pelanggan', PelangganController::class);
+Route::resource('user', UserController::class);
+
+Route::get('/login', [AuthController::class, 'index'])->name('login');
+Route::get('/auth', [AuthController::class, 'index'])->name('auth.index');
+Route::post('/login', [AuthController::class, 'login'])->name('auth.login');
+Route::match(['GET', 'POST'], '/logout', [AuthController::class, 'logout'])->name('logout');
+Route::match(['GET', 'POST'], '/auth/logout', [AuthController::class, 'logout'])->name('auth.logout');
